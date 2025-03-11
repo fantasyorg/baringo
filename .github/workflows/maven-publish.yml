@@ -24,8 +24,8 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           server-id: 'redefantasy'
-          server-username: '${{ secrets.MAVEN_PUBLISH_USER }}'
-          server-password: '${{ secrets.MAVEN_PUBLISH_PASSWORD }}'
+          server-username: 'github'
+          server-password: 'H88MIi6PpzPkc6KNqPQ95VC6F6N99vRw'
           overwrite-settings: true
 
       - name: Show effective Maven settings
