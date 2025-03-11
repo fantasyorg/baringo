@@ -5,8 +5,8 @@
     <servers>
         <server>
             <id>redefantasy</id>
-            <username>${env.MAVEN_PUBLISH_USER}</username>
-            <password>${env.MAVEN_PUBLISH_PASSWORD}</password>
+            <username>github</username>
+            <password>H88MIi6PpzPkc6KNqPQ95VC6F6N99vRw</password>
         </server>
     </servers>
 </settings>
