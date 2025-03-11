@@ -35,8 +35,11 @@ jobs:
       - name: Copy settings.xml to Maven home
         run: cp $GITHUB_WORKSPACE/settings.xml ~/.m2/settings.xml
 
+      - name: Show effective Maven settings
+        run: mvn help:effective-settings
+
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+        run: mvn deploy -s ~/.m2/settings.xml
 
     env:
       MAVEN_PUBLISH_USER: ${{ secrets.MAVEN_PUBLISH_USER }}
