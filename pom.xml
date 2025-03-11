@@ -12,27 +12,6 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
 
-   <build>
-      <resources>
-         <resource>
-            <directory>src/main/resources</directory>
-            <filtering>false</filtering>
-         </resource>
-      </resources>
-
-      <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.14.0</version>
-            <configuration>
-               <source>21</source>
-               <target>21</target>
-            </configuration>
-         </plugin>
-      </plugins>
-   </build>
-
    <distributionManagement>
       <repository>
          <id>redefantasy</id>
@@ -75,4 +54,37 @@
       </dependency>
    </dependencies>
 
+   <build>
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+            <filtering>false</filtering>
+         </resource>
+      </resources>
+
+      <plugins>
+
+         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.14.0</version>
+            <configuration>
+               <source>21</source>
+               <target>21</target>
+            </configuration>
+         </plugin>
+
+         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+               <repositoryId>redefantasy</repositoryId>
+               <url>https://nexus.redefantasy.online/repository/maven-snapshots/</url>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
 </project>
