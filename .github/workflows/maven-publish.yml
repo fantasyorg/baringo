@@ -28,7 +28,13 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-  
+
+      - name: List files in workspace
+        run: ls -la $GITHUB_WORKSPACE
+
+      - name: Copy settings.xml to Maven home
+        run: cp $GITHUB_WORKSPACE/settings.xml ~/.m2/settings.xml
+
       - name: Publish to GitHub Packages Apache Maven
         run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
 
