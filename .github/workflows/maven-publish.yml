@@ -24,6 +24,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+        
       - name: Check Maven Publish Credentials
         run: |
           if [ -z "$GITHUB_MAVEN_PUBLISH_USER" ] || [ -z "$GITHUB_MAVEN_PUBLISH_PASSWORD" ]; then
