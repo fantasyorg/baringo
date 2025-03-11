@@ -30,7 +30,7 @@ jobs:
         
       - name: Check Maven Publish Credentials
         run: |
-          if [ -z "$GITHUB_MAVEN_PUBLISH_USER" ] || [ -z "$GITHUB_MAVEN_PUBLISH_PASSWORD" ]; then
+          if [ -z "$MAVEN_PUBLISH_USER" ] || [ -z "$MAVEN_PUBLISH_PASSWORD" ]; then
             echo "Credenciais não definidas!"
             exit 1
           else
