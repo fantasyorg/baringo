@@ -4,7 +4,7 @@
 
    <groupId>com.github.kskelm.baringo</groupId>
    <artifactId>baringo</artifactId>
-   <version>1.0.0</version>
+   <version>1.0-SNAPSHOT</version>
 
    <name>baringo</name>
 
@@ -15,8 +15,7 @@
    <distributionManagement>
       <repository>
          <id>redefantasy</id>
-         <name>Rede Fantasy Development Nexus</name>
-         <url>https://nexus.redefantasy.online/repository/maven-releases/</url>
+         <url>https://nexus.redefantasy.online/repository/maven-snapshots/</url>
       </repository>
    </distributionManagement>
 
@@ -83,7 +82,7 @@
             <version>3.1.2</version>
             <configuration>
                <repositoryId>redefantasy</repositoryId>
-               <url>https://nexus.redefantasy.online/repository/maven-releases/</url>
+               <url>https://nexus.redefantasy.online/repository/maven-snapshots/</url>
             </configuration>
          </plugin>
       </plugins>
