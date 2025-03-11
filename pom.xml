@@ -14,7 +14,7 @@
 
    <distributionManagement>
       <repository>
-         <id>redefantasy</id>
+         <id>fantasy-nexus</id>
          <url>https://nexus.redefantasy.online/repository/maven-snapshots/</url>
       </repository>
    </distributionManagement>
@@ -81,7 +81,7 @@
             <artifactId>maven-deploy-plugin</artifactId>
             <version>3.1.2</version>
             <configuration>
-               <repositoryId>redefantasy</repositoryId>
+               <repositoryId>fantasy-nexus</repositoryId>
                <url>https://nexus.redefantasy.online/repository/maven-snapshots/</url>
             </configuration>
          </plugin>
