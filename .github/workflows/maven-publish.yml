@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
@@ -29,7 +30,7 @@ jobs:
         run: mvn -B package --file pom.xml
   
       - name: Publish to GitHub Packages Apache Maven
-        run: mvn deploy -s ${{ github.workspace }}/settings.xml
+        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
 
     env:
       MAVEN_PUBLISH_USER: ${{ secrets.MAVEN_PUBLISH_USER }}
