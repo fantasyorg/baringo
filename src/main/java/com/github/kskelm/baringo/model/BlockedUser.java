@@ -1,4 +1,6 @@
-/** This file is released under the Apache License 2.0. See the LICENSE file for details. **/
+/**
+ * This file is released under the Apache License 2.0. See the LICENSE file for details.
+ **/
 package com.github.kskelm.baringo.model;
 
 import com.github.kskelm.baringo.util.Utils;
@@ -12,34 +14,35 @@ import com.google.gson.annotations.SerializedName;
 
 public class BlockedUser {
 
-	
-	/**
-	 * The numeric id of the blocked account
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
 
-	/**
-	 * The name of the blocked account
-	 * @return the username
-	 */
-	public String getUserName() {
-		return userName;
-	}
+    private int id;
+    @SerializedName("url")
+    private String userName;
 
-	// ===========================================================
+    // ===========================================================
 
-	protected BlockedUser() {}
-	
-	private int id;
-	@SerializedName("url")
-	private String userName;
+    protected BlockedUser() {
+    }
 
-	@Override
-	public String toString() {
-		return Utils.toString( this );
-	} // toString
+    /**
+     * The numeric id of the blocked account
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * The name of the blocked account
+     * @return the username
+     */
+    public String getUserName() {
+        return userName;
+    }
+
+    @Override
+    public String toString() {
+        return Utils.toString(this);
+    } // toString
 
 } // class BlockedUser
